@@ -1,7 +1,7 @@
 import React from 'react'
 import  style from './input.module.css'
 
-function Input({type, text, name, id, placeholder, value}){
+function Input({type, text, name, id, placeholder, value, handlerChange}){
   return(
     <div className={style.form_control}>
 
@@ -12,6 +12,7 @@ function Input({type, text, name, id, placeholder, value}){
         id={id}
         placeholder={placeholder} 
         value={value}
+        onChange={handlerChange}
         />
     </div>
   )
