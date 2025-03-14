@@ -5,9 +5,9 @@ import './App.css'
 import Container from './components/layout/Container'
 
 import Home from './components/pages/Home'
-import CreateBook from './components/pages/CreateShoes'
-import ListBook from './components/pages/ListShoes'
 
+import ListShoes from './components/pages/ListShoes'
+import CreateShoes from './components/pages/CreateShoes'
 import NavBar from './components/layout/NavBar'
 
 function App() {
@@ -26,8 +26,8 @@ function App() {
               <Route path='/' element={<NavBar />}>
 
                 <Route path='/' element={<Home />} />
-                <Route path='/newBook' element={<CreateBook />} />
-                <Route path='/listBook' element={<ListBook />} />
+                <Route path='/newShoes' element={<CreateShoes />} />
+                <Route path='/listShoes' element={<ListShoes />} />
 
               </Route>
 

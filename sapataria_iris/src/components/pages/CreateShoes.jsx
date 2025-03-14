@@ -4,7 +4,7 @@ import style from './CreateShoes.module.css'
 import Input from "../form/input";
 import Select from "../form/Select";
 import Button from "../form/Button";
-const CreateBook = ()=>{
+const CreateShoes = ()=>{
     return(
         <section className={style.create_book_container}>
             <h1>CADASTRO DE TENIS</h1>
@@ -26,7 +26,7 @@ const CreateBook = ()=>{
             <Input 
                 type='descriçao'
                 name='txt_cliente'
-                id='txt_cliente'
+                id='txt_descricao'
                 placeholder='Digite a descrição do produto'
             />
            
@@ -36,4 +36,4 @@ const CreateBook = ()=>{
     )
 }
 
-export default CreateBook
+export default CreateShoes

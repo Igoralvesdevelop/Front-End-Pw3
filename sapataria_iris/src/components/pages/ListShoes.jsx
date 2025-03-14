@@ -1,12 +1,12 @@
 import React from "react";
 import style from './ListShoes.module.css'
 
-const ListBook = ()=>{
+const ListShoes = ()=>{
     return(
         <section>
-            <h1>LIST BOOK</h1>
+            <h1>List Shoes</h1>
         </section>
     )
 }
 
-export default ListBook
+export default ListShoes

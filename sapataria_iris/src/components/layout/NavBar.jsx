@@ -19,13 +19,13 @@ const NavBar = ()=>{
                         <li className={style.item}>HOME</li>
                     </Link>
                     
-                    <Link to='/newBook'>
-                        <li className={style.item}>CADASTRAR LIVROS</li>
+                    <Link to='/newShoes'>
+                        <li className={style.item}>CADASTRAR SAPATOS</li>
                     </Link>
                     
 
-                    <Link to='/listBook'>
-                        <li className={style.item}>LISTAR LIVROS</li>
+                    <Link to='/listShoes'>
+                        <li className={style.item}>LISTAR SAPATOS</li>
                     </Link>
 
                 </ul>

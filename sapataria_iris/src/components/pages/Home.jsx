@@ -8,7 +8,7 @@ const Home = ()=>{
 
             <h1> SAPATARIA IRIS</h1>
             <p></p>
-            <img className='book_home' src="./book_home.jpg" alt="" />
+            <img className='book_home' src="" alt="" />
 
         </section>
 
