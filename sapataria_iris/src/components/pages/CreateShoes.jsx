@@ -24,7 +24,31 @@ const CreateShoes = () => {
     event.preventDefault();
     // Aqui, podemos validar ou processar o valor de entrada se necessário
     console.log(shoes);
+    insertShoes(shoes); // Chama a função para inserir o livro
   }
+  /* INSERÇÃO DE LIVRO */
+  function insertShoes(shoes) {
+      
+      fetch('http://127.0.0.1:5000/inserirclientes', {
+          method:'POST',
+          mode:'cors',
+          headers:{
+              'Content-Type':'application/json',
+              'Access-Control-Allow-Origin':'*',
+              'Access-Control-Allow-Headers':'*'
+          },
+          body:JSON.stringify(shoes)
+      }).then((resp)=>
+          resp.json()
+      ).then((respJSON)=>{
+          console.log('RESPOSTA: ' + respJSON);
+      }).catch((error)=>{
+          console.log('ERRO: ' + error);
+      })
+
+  }
+
+
 
   return (
     <section className={style.create_shoes_container}>
@@ -40,16 +64,16 @@ const CreateShoes = () => {
 
         <Input
           type="tel"
-          name="number_telefone"
-          id="number_telefone"
+          name="telefone"
+          id="telefone"
           placeholder="Digite o telefone do cliente"
           handlerChange={handlerChangeBook}
         />
 
         <Input
           type="text"
-          name="txt_descricao"
-          id="txt_descricao"
+          name="descricao"
+          id="descricao"
           placeholder="Digite a descrição do produto"
           handlerChange={handlerChangeBook}
         />
@@ -82,8 +106,8 @@ const CreateShoes = () => {
         {showPriceInput && (
           <Input
             type="number"
-            name="number_preco"
-            id="number_preco"
+            name="number_entrada"
+            id="valor_entrada"
             placeholder="Digite o valor da entrada"
             handlerChange={handlerChangeBook}
             value={shoes.number_preco || ""} 
