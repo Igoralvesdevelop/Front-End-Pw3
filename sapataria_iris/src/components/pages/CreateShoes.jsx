@@ -29,7 +29,7 @@ const CreateShoes = () => {
   /* INSERÇÃO DE LIVRO */
   function insertShoes(shoes) {
       
-      fetch('http://127.0.0.1:5000/inserirclientes', {
+      fetch('http://localhost:5000/inserirclientes', {
           method:'POST',
           mode:'cors',
           headers:{
@@ -56,10 +56,11 @@ const CreateShoes = () => {
       <form onSubmit={submit}>
         <Input
           type="text"
-          name="txt_cliente"
-          id="txt_cliente"
+          name="nome"
+          id="nome"
           placeholder="Digite o nome do cliente"
           handlerChange={handlerChangeBook}
+          required
         />
 
         <Input
@@ -68,8 +69,16 @@ const CreateShoes = () => {
           id="telefone"
           placeholder="Digite o telefone do cliente"
           handlerChange={handlerChangeBook}
+          required
         />
-
+        <Input
+          type="text"
+          name="endereco"
+          id="endereco"
+          placeholder="Digite o endereço do cliente"
+          handlerChange={handlerChangeBook}
+          required
+        />
         <Input
           type="text"
           name="descricao"
@@ -77,7 +86,15 @@ const CreateShoes = () => {
           placeholder="Digite a descrição do produto"
           handlerChange={handlerChangeBook}
         />
-
+         <Input
+          type="number"
+          name="valor"
+          id="valor"
+          placeholder="Digite o valor do conserto"
+          handlerChange={handlerChangeBook}
+          step="0.01"
+          required
+        />
        
         <div>
           <label>
@@ -106,11 +123,11 @@ const CreateShoes = () => {
         {showPriceInput && (
           <Input
             type="number"
-            name="number_entrada"
-            id="valor_entrada"
+            name="entrada"
+            id="entrada"
             placeholder="Digite o valor da entrada"
             handlerChange={handlerChangeBook}
-            value={shoes.number_preco || ""} 
+            step="0.01"
           />
         )}
 
